@@ -11,6 +11,6 @@ void ft_putstr(char *str){
 
 int main()
 {
-    ft_putstr("Helo World");
+    ft_putstr("Hello World");
     return 0;
 }
