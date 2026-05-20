@@ -1,16 +1,16 @@
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+void ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return ;
+		return;
 	}
 	if (nb < 0)
 	{
@@ -26,7 +26,7 @@ void	ft_putnbr(int nb)
 	}
 }
 
-int		main(void)
+int main(void)
 {
 	write(1, "Test 1 : ", 9);
 	ft_putnbr(50);
