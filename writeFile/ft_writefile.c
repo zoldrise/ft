@@ -23,7 +23,6 @@ int main(int argc, char **argv) {
     return (1);
   }
 
-  write(fd, "\n", 1);
   close(fd);
   return (0);
 }
