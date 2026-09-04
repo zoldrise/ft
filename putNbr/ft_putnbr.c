@@ -11,9 +11,9 @@ void ft_putnbr(int nb) {
     ft_putchar('-');
     nb = nb * -1;
   }
-  if (nb >= 0 && nb < 10)
+  if (nb >= 0 && nb < 10) {
     ft_putchar(nb + '0');
-  else {
+  } else {
     ft_putnbr(nb / 10);
     ft_putnbr(nb % 10);
   }
