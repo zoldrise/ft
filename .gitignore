@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# But keep directories
+!*/
+
+# Keep .c source files
+!*.c
+
+# Keep this .gitignore
+!.gitignore
