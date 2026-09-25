@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
     return (1);
   }
 
-  fd = creat(argv[1], 0644);
+  fd = creat(argv[1], S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
   if (fd < 0)
     return (1);
 
