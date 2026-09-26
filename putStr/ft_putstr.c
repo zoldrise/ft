@@ -3,7 +3,9 @@
 void ft_putstr(char *str) {
   int i = 0;
   while (str[i] != '\0') {
-    write(1, &str[i], 1);
+    if (write(1, &str[i], 1) == -1) {
+      return;
+    }
     i++;
   }
 }

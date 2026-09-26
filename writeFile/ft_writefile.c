@@ -6,13 +6,15 @@ int main(int argc, char **argv) {
   int len;
 
   if (argc != 3) {
-    write(1, "Usage: ./ft_writefile <filename> \"<data>\"\n", 42);
-    return (1);
+    if (write(2, "Usage: ./ft_writefile <filename> \"<data>\"\n", 42) == -1) {
+      return 1;
+    }
+    return 1;
   }
 
   fd = creat(argv[1], S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
   if (fd < 0)
-    return (1);
+    return 1;
 
   len = 0;
   while (argv[2][len] != '\0')
@@ -20,9 +22,9 @@ int main(int argc, char **argv) {
 
   if (write(fd, argv[2], len) < 0) {
     close(fd);
-    return (1);
+    return 1;
   }
 
   close(fd);
-  return (0);
+  return 0;
 }

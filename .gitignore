@@ -9,3 +9,9 @@
 
 # Keep this .gitignore
 !.gitignore
+
+# Ignore build directories
+build/
+
+# Keep CmakeLists.txt
+!CMakeLists.txt
